@@ -8,6 +8,7 @@
 <meta property="og:title" content="Design Creato · Design de produits à Québec">
 <meta property="og:description" content="De l'idée au produit, prêt à fabriquer.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://designcreato.ca/images/bureau-design-creato.jpg">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 346 346'%3E%3Ccircle cx='27' cy='27' r='27' fill='%230b66a0'/%3E%3Cpath d='M131 27H319V93M27 131V319H319V258' fill='none' stroke='%23ef6a1e' stroke-width='54' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,8 +51,13 @@ section, #contact { scroll-margin-top: 72px; }
 .nav-cta:hover { background: var(--orange-dark); }
 @media (max-width: 420px) { .nav { gap: 12px; } .nav-cta { padding: 10px 12px; } }
 
-.hero { padding-block: clamp(48px, 9vw, 112px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 24px; }
-.hero h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); font-weight: 800; line-height: 1.02; letter-spacing: -.03em; max-width: 16ch; }
+.hero { padding-block: clamp(40px, 7vw, 88px) clamp(48px, 7vw, 88px); display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 40px 56px; align-items: center; }
+.hero-text { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.hero-photo { margin: 0; min-width: 0; position: relative; }
+.hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 812 / 768; object-fit: cover; border-radius: 6px; box-shadow: 0 24px 48px -28px rgba(0,0,0,.45); }
+.hero-photo::after { content: ""; position: absolute; top: -10px; right: -10px; width: 46px; height: 46px; border: 5px solid var(--orange); border-left: 0; border-bottom: 0; border-radius: 0 8px 0 0; pointer-events: none; }
+@media (max-width: 860px) { .hero { grid-template-columns: 1fr; } .hero-photo { max-width: 560px; } }
+.hero h1 { font-size: clamp(2.3rem, 4.6vw, 3.8rem); font-weight: 800; line-height: 1.02; letter-spacing: -.03em; max-width: 16ch; }
 .hero h1 b { color: var(--orange); }
 .hero p { font-size: 1.2rem; color: var(--ink-2); max-width: 50ch; }
 .btn { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 600 1rem/1 var(--text); padding: 16px 24px; border-radius: 4px; background: var(--orange); color: #fff; }
@@ -112,11 +118,19 @@ footer a:hover { color: #fff; }
 
 <main>
   <div class="wrap hero">
+   <div class="hero-text">
     <span class="kicker"><span data-l="fr">Studio de design de produits</span><span data-l="en">Product design studio</span><i class="sep" aria-hidden="true"></i><span class="loc">Québec, Canada</span></span>
     <h1><span data-l="fr">De l'idée au produit, <b>prêt à fabriquer</b>.</span><span data-l="en">From idea to product, <b>ready to manufacture</b>.</span></h1>
     <p><span data-l="fr">Design Creato conçoit des produits physiques pour les entrepreneurs et les PME. Notre équipe de designers vous accompagne du premier croquis jusqu'à la production.</span><span data-l="en">Design Creato designs physical products for entrepreneurs and manufacturers. Our team of designers supports you from the first sketch through to production.</span></p>
     <a class="btn" href="#contact"><span data-l="fr">Parlons de votre projet</span><span data-l="en">Let's talk about your project</span> →</a>
     <p class="note"><span data-l="fr">Notre nouveau site est en préparation. En attendant, n'hésitez pas à nous écrire.</span><span data-l="en">Our new website is on its way. In the meantime, feel free to get in touch.</span></p>
+   </div>
+   <figure class="hero-photo">
+     <picture>
+       <source srcset="/images/bureau-design-creato.webp" type="image/webp">
+       <img src="/images/bureau-design-creato.jpg" width="812" height="768" alt="Poste de travail du studio Design Creato : plan de conception coté, pièces imprimées en 3D, visserie et logiciel de CAO à l'écran" fetchpriority="high">
+     </picture>
+   </figure>
   </div>
 
   <section id="services">
