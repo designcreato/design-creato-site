@@ -43,6 +43,8 @@ header .wrap { display: flex; align-items: center; justify-content: space-betwee
 .hero p { font-size: 1.2rem; color: var(--ink-2); max-width: 50ch; }
 .btn { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 600 1rem/1 var(--text); padding: 16px 24px; border-radius: 4px; background: var(--orange); color: #fff; }
 .btn:hover { background: var(--orange-dark); }
+.pill { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; font: 600 .82rem/1 var(--text); color: var(--blue); background: rgba(11,102,160,.08); border: 1px solid rgba(11,102,160,.25); padding: 8px 12px; border-radius: 999px; }
+.pill svg { width: 12px; height: 14px; flex: none; }
 .note { font-size: .92rem; color: var(--ink-2); border-left: 3px solid var(--blue); padding-left: 12px; }
 
 section { border-top: 1px solid var(--rule); padding-block: clamp(56px, 7vw, 88px); }
@@ -95,6 +97,7 @@ footer a:hover { color: #fff; }
 
 <main>
   <div class="wrap hero">
+    <span class="pill"><svg viewBox="0 0 12 14" aria-hidden="true"><path d="M6 0a6 6 0 0 0-6 6c0 4.5 6 8 6 8s6-3.5 6-8a6 6 0 0 0-6-6zm0 8.2A2.2 2.2 0 1 1 6 3.8a2.2 2.2 0 0 1 0 4.4z" fill="#ef6a1e"/></svg><span data-l="fr">Établis à Québec, Canada</span><span data-l="en">Based in Quebec City, Canada</span></span>
     <span class="kicker"><span data-l="fr">Studio de design de produits</span><span data-l="en">Product design studio</span></span>
     <h1><span data-l="fr">De l'idée au produit, <b>prêt à fabriquer</b>.</span><span data-l="en">From idea to product, <b>ready to manufacture</b>.</span></h1>
     <p><span data-l="fr">Design Creato conçoit des produits physiques pour les entrepreneurs et les PME. Notre équipe de designers vous accompagne du premier croquis jusqu'à la production.</span><span data-l="en">Design Creato designs physical products for entrepreneurs and manufacturers. Our team of designers supports you from the first sketch through to production.</span></p>
